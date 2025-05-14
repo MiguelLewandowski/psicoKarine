@@ -8,106 +8,22 @@
   <title>Psicóloga Karine Strapazon - Terapia Cognitivo-Comportamental</title>
 
   <link rel="shortcut icon" type="image/jpg" href="img/logo.jpg">
-  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="./dist/output.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap">
-
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            primary: '#0f9974', // Tom de verde médio
-            secondary: '#E0F2E1', // Verde bem claro
-            accent: '#FF9800', // Laranja/âmbar para contraste
-            warmGray: '#F5FFF7', // Fundo verde muito claro
-          },
-          fontFamily: {
-            sans: ['Poppins', 'sans-serif'],
-          }
-        }
-      }
-    }
-  </script>
-
-  <style type="text/tailwindcss">
-    body {
-      @apply bg-warmGray text-gray-800 font-sans;
-    }
-    .section-heading {
-      @apply text-3xl md:text-4xl font-semibold text-primary mb-6 relative;
-    }
-    .section-heading::after {
-      content: '';
-      @apply absolute bottom-0 left-0 w-20 h-1 bg-secondary rounded;
-    }
-    .nav-link {
-      @apply px-4 py-2 text-gray-700 hover:text-primary transition duration-300;
-    }
-    .nav-link.active {
-      @apply text-primary font-medium;
-    }
-    .card {
-      @apply bg-white rounded-lg shadow-md p-6 transition duration-300 hover:shadow-lg;
-    }
-    /* Menu hamburguer estilizado */
-    .hamburger-icon {
-      @apply w-6 h-6 relative flex flex-col justify-center items-center;
-    }
-    .hamburger-icon span {
-      @apply block absolute h-0.5 w-full bg-primary rounded-sm transition-all duration-300 ease-in-out;
-      transform-origin: center;
-    }
-    .hamburger-icon span:nth-child(1) {
-      transform: translateY(-6px);
-    }
-    .hamburger-icon span:nth-child(3) {
-      transform: translateY(6px);
-    }
-    /* Quando o menu está aberto */
-    .hamburger-open span:nth-child(1) {
-      transform: rotate(45deg);
-    }
-    .hamburger-open span:nth-child(2) {
-      opacity: 0;
-    }
-    .hamburger-open span:nth-child(3) {
-      transform: rotate(-45deg);
-    }
-    /* Menu mobile estilizado */
-    .mobile-menu {
-      @apply overflow-hidden mt-2 py-0 rounded-lg shadow-lg bg-white/95 backdrop-blur-sm;
-      height: 0;
-      opacity: 0;
-      visibility: hidden;
-      transition: all 0.3s ease;
-    }
-    .mobile-menu.open {
-      @apply py-2;
-      height: auto;
-      opacity: 1;
-      visibility: visible;
-    }
-    .mobile-link {
-      @apply block px-6 py-3 text-gray-700 hover:text-primary hover:bg-gray-50 transition duration-300 border-l-4 border-transparent;
-    }
-    .mobile-link.active {
-      @apply text-primary font-medium border-l-4 border-primary;
-    }
-    .mobile-link.bg-primary {
-      @apply rounded-lg mx-4 my-2 px-4 text-center;
-    }
-  </style>
+  <meta name="description" content="Psicóloga Karine Strapazon - Especialista em Terapia Cognitivo-Comportamental. Agende sua consulta e transforme sua vida emocional.">
 </head>
 
 <body class="antialiased">
+  <a href="#inicio" class="skip-link sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-2 bg-primary text-white px-4 py-2 rounded-md z-50">Pular para o conteúdo</a>
+  
   <!-- Header e navegação -->
   <header class="bg-white shadow-sm sticky top-0 z-50">
     <div class="container mx-auto px-4 py-3">
       <div class="flex justify-between items-center">
         <div class="flex items-center space-x-4">
           <h1 class="text-2xl font-semibold text-primary">Karine Strapazon</h1>
-          <p class="hidden md:block text-sm text-gray-600">Psicóloga | CRP 02/32730</p>
+          <p class="hidden md:block text-sm text-gray-600">Psicóloga | CRP 07/32730</p>
         </div>
         
         <nav class="hidden md:flex items-center space-x-4">
@@ -118,12 +34,12 @@
           <a href="#tcc" class="nav-link">TCC</a>
           <a href="#contato"
             class="nav-link bg-primary hover:bg-primary/90 text-white px-5 py-2 rounded-full">Contato</a>
-          <a href="https://www.instagram.com/psicokarinestrapazon" target="_blank" class="nav-link text-gray-700 hover:text-primary transition duration-300">
+          <a href="https://www.instagram.com/psicokarinestrapazon" target="_blank" class="nav-link text-gray-700 hover:text-primary transition duration-300" aria-label="Instagram">
             <i class="fab fa-instagram text-xl"></i>
           </a>
         </nav>
         
-        <button class="block md:hidden text-gray-700 focus:outline-none relative w-8 h-8" id="menu-toggle">
+        <button class="block md:hidden text-gray-700 focus:outline-none relative w-8 h-8" id="menu-toggle" aria-label="Menu" aria-expanded="false" aria-controls="mobile-menu">
           <div class="hamburger-icon">
             <span></span>
             <span></span>
@@ -133,14 +49,14 @@
       </div>
       
       <!-- Menu mobile -->
-      <nav class="md:hidden mobile-menu" id="mobile-menu">
+      <nav class="md:hidden mobile-menu" id="mobile-menu" aria-hidden="true">
         <a href="#inicio" class="mobile-link active">Início</a>
         <a href="#sobre" class="mobile-link">Sobre</a>
         <a href="#ansiedade" class="mobile-link">Ansiedade</a>
         <a href="#ajuda" class="mobile-link">Quando buscar ajuda</a>
         <a href="#tcc" class="mobile-link">TCC</a>
         <a href="#contato" class="mobile-link bg-primary text-white">Contato</a>
-        <a href="https://www.instagram.com/psicokarinestrapazon" target="_blank" class="mobile-link">
+        <a href="https://www.instagram.com/psicokarinestrapazon" target="_blank" class="mobile-link" aria-label="Instagram">
           <i class="fab fa-instagram mr-2"></i> Instagram
         </a>
       </nav>
@@ -171,7 +87,7 @@
         </div>
         <div class="md:w-1/2 pl-0 md:pl-10">
           <div class="bg-white p-2 rounded-lg shadow-lg transform rotate-2">
-            <img src="img/DSC_0491.jpg" alt="Karine Strapazon Psicóloga"
+            <img src="img/img-header.webp" alt="Karine Strapazon Psicóloga"
               class="rounded-lg w-full h-auto object-cover transform -rotate-2 transition-all duration-300 hover:rotate-0">
           </div>
         </div>
@@ -187,7 +103,7 @@
       <div class="flex flex-col md:flex-row gap-10 items-center">
         <div class="md:w-1/3">
           <div class="bg-secondary/40 p-3 rounded-lg shadow-md transform -rotate-1">
-            <img src="img/DSC_0571.jpg" alt="Karine Strapazon Psicóloga"
+            <img src="img/img-sobre.webp" alt="Karine Strapazon Psicóloga"
               class="rounded-lg w-full h-auto object-cover transform rotate-1 transition-all duration-300 hover:rotate-0">
           </div>
         </div>
@@ -297,23 +213,23 @@
             <ul class="space-y-3">
               <li class="flex items-start">
                 <i class="fas fa-check-circle text-accent mt-1 mr-3"></i>
-                <span>Identificação de gatilhos de ansiedade</span>
+                <span>Entendimento das causas</span>
               </li>
               <li class="flex items-start">
                 <i class="fas fa-check-circle text-accent mt-1 mr-3"></i>
-                <span>Técnicas de respiração e relaxamento</span>
+                <span>Técnicas para lidar com crises</span>
               </li>
               <li class="flex items-start">
                 <i class="fas fa-check-circle text-accent mt-1 mr-3"></i>
-                <span>Reestruturação de pensamentos negativos</span>
+                <span>Mudança de pensamentos negativos</span>
               </li>
               <li class="flex items-start">
                 <i class="fas fa-check-circle text-accent mt-1 mr-3"></i>
-                <span>Estratégias de enfrentamento personalizada</span>
+                <span>Fortalecimento emocional</span>
               </li>
               <li class="flex items-start">
                 <i class="fas fa-check-circle text-accent mt-1 mr-3"></i>
-                <span>Desenvolvimento de autocompaixão</span>
+                <span>Acompanhamento personalizado</span>
               </li>
             </ul>
           </div>
@@ -399,9 +315,8 @@
       </div>
 
       <div class="bg-white p-6 rounded-lg shadow text-center">
-        <p class="text-xl text-primary font-medium">
-          Se você se identificou com alguns desses sentimentos, pode ser o momento ideal para buscar apoio psicológico.
-          A terapia pode ser o espaço seguro que você precisa para retomar o controle da sua vida emocional.
+        <p class="text-2xl p-4 text-primary font-medium">
+          Se você está pronto para dar o primeiro passo rumo a uma vida com mais equilíbrio e tranquilidade, estou aqui para te apoiar nessa jornada.
         </p>
         <a href="https://api.whatsapp.com/send?phone=5551997246990&text=Olá,%20gostaria%20de%20agendar%20uma%20consulta."
           class="inline-block mt-6 bg-primary hover:bg-primary/90 text-white px-8 py-3 rounded-full text-center font-medium transition duration-300">
@@ -551,12 +466,12 @@
       <div class="flex flex-col md:flex-row justify-between items-center">
         <div class="mb-6 md:mb-0">
           <h3 class="text-xl font-semibold mb-2">Karine Strapazon</h3>
-          <p class="text-gray-400">Psicóloga | CRP 02/32730</p>
+          <p class="text-gray-400">Psicóloga | CRP 07/32730</p>
         </div>
 
         <div class="mb-6 md:mb-0">
           <h4 class="font-medium mb-2">Navegação</h4>
-          <nav class="flex flex-wrap gap-4">
+          <nav class="flex flex-wrap gap-4" aria-label="Navegação do rodapé">
             <a href="#inicio" class="text-gray-400 hover:text-white transition">Início</a>
             <a href="#sobre" class="text-gray-400 hover:text-white transition">Sobre</a>
             <a href="#ansiedade" class="text-gray-400 hover:text-white transition">Ansiedade</a>
@@ -568,10 +483,10 @@
         <div class="mb-6 md:mb-0">
           <h4 class="font-medium mb-2">Redes Sociais</h4>
           <div class="flex space-x-4">
-            <a href="https://www.instagram.com/psicokarinestrapazon" target="_blank" class="text-gray-400 hover:text-white transition">
+            <a href="https://www.instagram.com/psicokarinestrapazon" target="_blank" class="text-gray-400 hover:text-white transition" aria-label="Instagram">
               <i class="fab fa-instagram text-xl"></i>
             </a>
-            <a href="https://api.whatsapp.com/send?phone=5551997246990&text=Olá,%20gostaria%20de%20agendar%20uma%20consulta." class="text-gray-400 hover:text-white transition">
+            <a href="https://api.whatsapp.com/send?phone=5551997246990&text=Olá,%20gostaria%20de%20agendar%20uma%20consulta." class="text-gray-400 hover:text-white transition" aria-label="WhatsApp">
               <i class="fab fa-whatsapp text-xl"></i>
             </a>
           </div>
@@ -581,25 +496,50 @@
       <hr class="border-gray-700 my-6">
 
       <div class="text-center text-gray-400 text-sm">
-        <p>Copyright &copy; 2024 Karine Strapazon - CRP 02/32730</p>
+        <p>Copyright &copy; <span id="current-year">2025</span> Karine Strapazon - CRP 07/32730</p>
       </div>
     </div>
   </footer>
 
   <!-- Botão flutuante do WhatsApp -->
   <a href="https://api.whatsapp.com/send?phone=5551997246990&text=Olá,%20gostaria%20de%20agendar%20uma%20consulta."
-    class="fixed bottom-6 right-6 bg-green-500 hover:bg-green-600 text-white flex items-center justify-center w-14 h-14 rounded-full shadow-lg transition duration-300 z-50">
+    class="fixed bottom-6 right-6 bg-green-500 hover:bg-green-600 text-white flex items-center justify-center w-14 h-14 rounded-full shadow-lg transition duration-300 z-50"
+    aria-label="Contato via WhatsApp">
     <i class="fab fa-whatsapp text-2xl"></i>
   </a>
 
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script>
     $(document).ready(function () {
+      // Detectar se o usuário está usando mouse ou teclado
+      function handleFirstTab(e) {
+        if (e.keyCode === 9) { // Tab pressionado
+          document.body.classList.remove('using-mouse');
+          window.removeEventListener('keydown', handleFirstTab);
+          window.addEventListener('mousedown', handleMouseDownOnce);
+        }
+      }
+      
+      function handleMouseDownOnce() {
+        document.body.classList.add('using-mouse');
+        window.removeEventListener('mousedown', handleMouseDownOnce);
+        window.addEventListener('keydown', handleFirstTab);
+      }
+      
+      // Iniciar assumindo navegação por mouse
+      window.addEventListener('keydown', handleFirstTab);
+      document.body.classList.add('using-mouse');
+      
+      // Atualizar o ano do copyright
+      document.getElementById('current-year').textContent = new Date().getFullYear();
+      
       // Menu mobile toggle
       $('#menu-toggle').click(function () {
+        const isExpanded = $(this).attr('aria-expanded') === 'true';
+        $(this).attr('aria-expanded', !isExpanded);
         $(this).find('.hamburger-icon').toggleClass('hamburger-open');
         $('#mobile-menu').toggleClass('open');
-        console.log('Menu toggle clicked');
+        $('#mobile-menu').attr('aria-hidden', isExpanded);
       });
       
       // Smooth scrolling para links
@@ -615,6 +555,15 @@
           // Fechar menu mobile se estiver aberto
           $('#mobile-menu').removeClass('open');
           $('.hamburger-icon').removeClass('hamburger-open');
+          $('#menu-toggle').attr('aria-expanded', 'false');
+          $('#mobile-menu').attr('aria-hidden', 'true');
+          
+          // Mover o foco para o alvo
+          $(target).attr('tabindex', '-1');
+          $(target).focus();
+          setTimeout(function() {
+            $(target).removeAttr('tabindex');
+          }, 1000);
         }
       });
       
@@ -632,6 +581,18 @@
           }
         });
       }).scroll();
+      
+      // Suporte para teclado em cards clicáveis
+      $('.card[onclick]').each(function() {
+        $(this).attr('tabindex', '0');
+        $(this).attr('role', 'button');
+        $(this).on('keydown', function(e) {
+          if (e.keyCode === 13 || e.keyCode === 32) { // Enter ou Space
+            e.preventDefault();
+            $(this).click();
+          }
+        });
+      });
     });
   </script>
 </body>

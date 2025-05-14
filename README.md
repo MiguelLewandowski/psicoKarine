@@ -1,50 +1,98 @@
-# Portfólio da Psicóloga Karine Strapazon 🧠✨
+# Site da Psicóloga Karine Strapazon
 
-Este projeto foi desenvolvido pela equipe **DEPS** com o objetivo de criar um portfólio online para a psicóloga Karine Strapazon. O site apresenta de forma clara e intuitiva suas especialidades, informações de contato e serviços oferecidos.
+Este é o repositório do site da Psicóloga Karine Strapazon, desenvolvido com HTML, JavaScript e Tailwind CSS.
 
-## 🔗 Link para o site
+## Tecnologias Utilizadas
 
-[Acesse o site aqui](https://psicologakarinestrapazon.com)
+- HTML5
+- JavaScript (jQuery)
+- Tailwind CSS v3.3.0
+- Font Awesome (ícones)
+- Google Fonts (Poppins)
 
----
+## Estrutura do Projeto
 
-## 📝 Sobre o Projeto
+```
+├── dist/
+│   └── output.css       # CSS compilado e minificado
+├── src/
+│   ├── index.html       # Arquivo HTML principal
+│   └── input.css        # Arquivo CSS de entrada para o Tailwind
+├── img/                 # Pasta de imagens
+├── package.json         # Configuração do npm
+├── tailwind.config.js   # Configuração do Tailwind CSS
+├── postcss.config.js    # Configuração do PostCSS
+└── README.md            # Este arquivo
+```
 
-O portfólio da Psicóloga Karine Strapazon foi construído com foco em design minimalista e navegação intuitiva. O site foi otimizado para ser responsivo e acessível em diversos dispositivos, com uma estrutura simples e informações diretas para que os visitantes possam entender facilmente as áreas de atuação da psicóloga e entrar em contato.
+## Instalação
 
----
+1. Clone o repositório:
+   ```
+   git clone [URL_DO_REPOSITORIO]
+   ```
 
-## 🎯 Objetivo
+2. Instale as dependências:
+   ```
+   npm install
+   ```
 
-O principal objetivo do site é fornecer uma vitrine profissional para a psicóloga Karine Strapazon, apresentando suas qualificações, áreas de especialidade, abordagem terapêutica e facilitando o agendamento de consultas.
+3. Verifique a instalação:
+   ```
+   node verificar-instalacao.js
+   ```
 
----
+## Desenvolvimento
 
-## 🛠 Tecnologias Utilizadas
+Para trabalhar no desenvolvimento do site, execute:
 
-- **HTML5**: Para a estruturação do conteúdo.
-- **CSS3**: Para o design, estilização e responsividade.
-- **JavaScript**: Para adicionar interatividade e melhorar a experiência do usuário.
-- **Bootstrap**: Para auxiliar na criação de um layout responsivo.
+```
+npm run dev
+```
 
----
+Isso irá iniciar o Tailwind CSS em modo de observação, recompilando o CSS a cada alteração nos arquivos HTML ou CSS.
 
-## 📄 Estrutura do Site
+## Build para produção
 
-1. **Home**  
-   Apresenta uma visão geral do trabalho da psicóloga, com destaque para suas especialidades e áreas de atuação.
+Para gerar a versão de produção otimizada, execute:
 
-2. **Sobre**  
-   Informações detalhadas sobre a carreira de Karine Strapazon, sua formação acadêmica e trajetória profissional.
+```
+npm run build
+```
 
-3. **Avaliações**  
-   Depoimentos e feedbacks de clientes, mostrando a experiência deles com a psicóloga e a qualidade dos serviços.
+Isso irá gerar um arquivo CSS minificado com apenas as classes utilizadas no projeto.
 
-4. **Contato**  
-   Formulário de contato para facilitar o agendamento de consultas e tirar dúvidas.
+## Solução de Problemas
 
----
+Se encontrar problemas com a instalação ou compilação, tente:
 
-## 📱 Responsividade
+1. Desinstalar e reinstalar as dependências:
+   ```
+   npm uninstall tailwindcss postcss autoprefixer
+   npm install -D tailwindcss@3.3.0 postcss@8.4.23 autoprefixer@10.4.14
+   ```
 
-O site foi projetado para oferecer uma boa experiência em dispositivos móveis, tablets e desktops, adaptando o layout de acordo com o tamanho da tela do usuário.
+2. Verificar a configuração:
+   ```
+   node verificar-instalacao.js
+   ```
+
+3. Atualizar o Browserslist:
+   ```
+   npx update-browserslist-db@latest
+   ```
+
+## Notas sobre a migração para build local do Tailwind
+
+Este projeto foi migrado de uma versão que utilizava Tailwind CSS via CDN para uma versão com build local, o que resultou em:
+
+1. **Redução significativa do tamanho do CSS** - Apenas as classes utilizadas são incluídas no build final
+2. **Melhor performance** - CSS minificado e otimizado
+3. **Manutenção mais fácil** - Configuração centralizada no arquivo tailwind.config.js
+4. **Versão específica** - Utiliza a versão 3.3.0 do Tailwind CSS para garantir compatibilidade e estabilidade
+
+## Contato
+
+Karine Strapazon - Psicóloga | CRP 07/32730
+- Instagram: [@psicokarinestrapazon](https://www.instagram.com/psicokarinestrapazon)
+- WhatsApp: [(51) 99724-6990](https://api.whatsapp.com/send?phone=5551997246990&text=Olá,%20gostaria%20de%20agendar%20uma%20consulta.)
