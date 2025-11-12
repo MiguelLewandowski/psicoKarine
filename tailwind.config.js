@@ -7,10 +7,10 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        primary: '#0f9974', // Tom de verde médio
-        secondary: '#E0F2E1', // Verde bem claro
-        accent: '#FF9800', // Laranja/âmbar para contraste
-        warmGray: '#F5FFF7', // Fundo verde muito claro
+        primary: '#8B4513', // Marrom sienna (principal)
+        secondary: '#D2B48C', // Marrom tan (secundário)
+        accent: '#A0522D', // Marrom sienna escuro (destaque)
+        warmGray: '#F5F5DC', // Bege claro (fundo)
       },
       fontFamily: {
         sans: ['Poppins', 'sans-serif'],
@@ -18,4 +18,4 @@ module.exports = {
     }
   },
   plugins: [],
-} 
+}
