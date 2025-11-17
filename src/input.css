@@ -108,4 +108,20 @@
   .mobile-link.bg-primary {
     @apply rounded-lg mx-4 my-2 px-4 text-center;
   }
-} 
+
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  @keyframes floatSoft {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-4px); }
+  }
+  .btn-float {
+    animation: floatSoft 3s ease-in-out infinite;
+  }
+}
