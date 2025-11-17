@@ -11,6 +11,7 @@ module.exports = {
         secondary: '#D2B48C', // Marrom tan (secundário)
         accent: '#A0522D', // Marrom sienna escuro (destaque)
         warmGray: '#F5F5DC', // Bege claro (fundo)
+        whatsapp: '#25D366',
       },
       fontFamily: {
         sans: ['Poppins', 'sans-serif'],
