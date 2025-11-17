@@ -4,8 +4,8 @@
   "description": "Landing page da Psicóloga Karine Strapazon",
   "main": "index.js",
   "scripts": {
-    "build": "npx tailwindcss@3.3.0 -i ./src/input.css -o ./dist/output.css --minify",
-    "dev": "npx tailwindcss@3.3.0 -i ./src/input.css -o ./dist/output.css --watch"
+    "build": "node ./node_modules/tailwindcss/lib/cli.js -i ./src/input.css -o ./dist/output.css --minify",
+    "dev": "node ./node_modules/tailwindcss/lib/cli.js -i ./src/input.css -o ./dist/output.css --watch"
   },
   "keywords": [],
   "author": "",
